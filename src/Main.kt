@@ -12,16 +12,21 @@ fun main() {
         println("1. Alta de conductores")
         println("2. Alta de autobuses")
         println("3. Comprar billete")
-        println("4. Salir")
+        println("4. Listar autobuses")
+        println("5. Listar conductores")
+        println("6. Salir")
 
         print("Seleccione una opción: ")
         val opcion = scan.nextInt()
+        scan.nextLine()
 
         when (opcion) {
             1 -> altaConductor(conductores)
             2 -> altaAutobus(autobuses)
             3 -> comprarBillete(autobuses, conductores)
-            4 -> {
+            4 -> listarAutobuses(autobuses)
+            5 -> listarConductores(conductores)
+            6 -> {
                 println("Saliendo del programa. ¡Hasta luego!")
                 return
             }
@@ -31,7 +36,7 @@ fun main() {
 }
 fun altaConductor(conductores: MutableList<Conductor>) {
     print("Ingrese el nombre del conductor: ")
-    val nombre = scan.next()
+    val nombre = scan.nextLine()
     print("Ingrese el salario del conductor: ")
     val salario = scan.nextDouble()
 
@@ -108,5 +113,20 @@ fun obtenerConductor(): Conductor {
     } else {
         println("Opción no válida. Se asignará un conductor por defecto.")
         Conductor("Conductor por defecto", 0.0)
+    }
+}
+
+
+fun listarAutobuses(autobuses: List<Autobuses>) {
+    println("\nListado de Autobuses:")
+    for ((index, autobus) in autobuses.withIndex()) {
+        println("${index + 1}. $autobus")
+    }
+}
+
+fun listarConductores(conductores: List<Conductor>) {
+    println("\nListado de Conductores:")
+    for ((index, conductor) in conductores.withIndex()) {
+        println("${index + 1}. $conductor")
     }
 }

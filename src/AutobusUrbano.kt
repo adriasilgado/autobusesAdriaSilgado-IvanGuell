@@ -19,4 +19,10 @@ class AutobusUrbano : Autobuses {
         }
     return precioFinal
     }
+
+    override fun toString(): String {
+        val precioFinal = calcularPrecio()
+        val info = "Autobuses: [Numero Identificador: $numero_id, Conductor: $conductor, Precio Base: $precio_base], Ruta: $ruta, Precio Trayecto: $precioFinal]"
+        return info
+    }
 }
