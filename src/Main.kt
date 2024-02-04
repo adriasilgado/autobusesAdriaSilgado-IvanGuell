@@ -8,6 +8,7 @@ val scan = Scanner(System.`in`)
  * @author Iván Güell.
  *
  * Función principal que inicializa la lista de autobuses y llama a la función del menú.
+ *
  */
 fun main() {
     val autobuses = mutableListOf<Autobuses>()
@@ -16,11 +17,13 @@ fun main() {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función que muestra el menú principal y permite al usuario seleccionar diferentes opciones.
  *
  * @param autobuses Lista mutable de autobuses.
+ *
  */
 fun menu(autobuses: MutableList<Autobuses>) {
     var salir = false
@@ -43,6 +46,7 @@ fun menu(autobuses: MutableList<Autobuses>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función que maneja las opciones del menú principal.
@@ -50,6 +54,7 @@ fun menu(autobuses: MutableList<Autobuses>) {
  * @param opcion Número correspondiente a la opción seleccionada por el usuario.
  * @param autobuses Lista mutable de autobuses.
  * @return Valor booleano que indica si se debe salir del programa.
+ *
  */
 fun opcionesMenu(opcion: Int, autobuses: MutableList<Autobuses>): Boolean {
     var salir = false
@@ -72,11 +77,13 @@ fun opcionesMenu(opcion: Int, autobuses: MutableList<Autobuses>): Boolean {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para agregar un conductor a la lista de conductores.
  *
  * @param conductores Lista mutable de conductores.
+ *
  */
 fun altaConductor(conductores: MutableList<Conductor>) {
     print("Ingrese el nombre del conductor: ")
@@ -91,11 +98,13 @@ fun altaConductor(conductores: MutableList<Conductor>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para agregar un autobús a la lista de autobuses.
  *
  * @param autobuses Lista mutable de autobuses.
+ *
  */
 fun altaAutobus(autobuses: MutableList<Autobuses>) {
     print("Ingrese el número de identificación del autobús: ")
@@ -113,6 +122,7 @@ fun altaAutobus(autobuses: MutableList<Autobuses>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para seleccionar el tipo de autobús y agregarlo a la lista de autobuses.
@@ -121,6 +131,7 @@ fun altaAutobus(autobuses: MutableList<Autobuses>) {
  * @param numeroId Número de identificación del autobús.
  * @param precioBase Precio base del autobús.
  * @param autobuses Lista mutable de autobuses.
+ *
  */
 fun tipoAutobus(tipoAutobus: Int, numeroId: Int, precioBase: Double, autobuses: MutableList<Autobuses>) {
     when (tipoAutobus) {
@@ -142,12 +153,14 @@ fun tipoAutobus(tipoAutobus: Int, numeroId: Int, precioBase: Double, autobuses: 
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para realizar la compra de un billete.
  *
  * @param autobuses Lista de autobuses disponibles.
  * @param conductores Lista de conductores disponibles.
+ *
  */
 fun comprarBillete(autobuses: List<Autobuses>, conductores: List<Conductor>) {
     println("\nSeleccione el autobús para comprar el billete:")
@@ -162,12 +175,14 @@ fun comprarBillete(autobuses: List<Autobuses>, conductores: List<Conductor>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para mostrar los detalles de la compra realizada.
  *
  * @param seleccion Índice del autobús seleccionado.
  * @param autobuses Lista de autobuses disponibles.
+ *
  */
 fun detallesCompra(seleccion: Int, autobuses: List<Autobuses>) {
     if (seleccion in 0 until autobuses.size) {
@@ -185,11 +200,13 @@ fun detallesCompra(seleccion: Int, autobuses: List<Autobuses>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para obtener un conductor seleccionado por el usuario.
  *
  * @return Conductor seleccionado.
+ *
  */
 fun obtenerConductor(): Conductor {
     println("\nSeleccione un conductor para el autobús:")
@@ -209,11 +226,13 @@ fun obtenerConductor(): Conductor {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para listar los autobuses almacenados en la lista.
  *
  * @param autobuses Lista de autobuses disponibles.
+ *
  */
 fun listarAutobuses(autobuses: List<Autobuses>) {
     println("\nListado de Autobuses:")
@@ -223,11 +242,13 @@ fun listarAutobuses(autobuses: List<Autobuses>) {
 }
 
 /**
+ *
  * @author Iván Güell.
  *
  * Función para listar los conductores almacenados en la lista.
  *
  * @param conductores Lista de conductores disponibles.
+ *
  */
 fun listarConductores(conductores: List<Conductor>) {
     println("\nListado de Conductores:")
