@@ -5,7 +5,12 @@ class AutobusInterurbano : Autobuses {
     constructor(numero_id: Int, conductor: Conductor, precio_base: Double, kilometros: Double) : super(numero_id, conductor, precio_base) {
         this.kilometros = kilometros
     }
-
+    fun set_Kilometros(kilometros: Double) {
+        this.kilometros = kilometros
+    }
+    fun get_Kilometros(): Double {
+        return kilometros
+    }
     override fun calcularPrecio() : Double {
         val precioFinal = precio_base * kilometros
         return precioFinal

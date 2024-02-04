@@ -4,7 +4,12 @@ class AutobusUrbano : Autobuses {
     constructor(numero_id: Int, conductor: Conductor, precio_base: Double, ruta: String) : super(numero_id, conductor, precio_base) {
         this.ruta = ruta
     }
-
+    fun set_Ruta(ruta: String) {
+        this.ruta = ruta
+    }
+    fun get_Ruta(): String  {
+        return ruta
+    }
     fun calcularPorcentaje(porcentaje: Double): Double {
         val resultado = precio_base * (porcentaje / 100)
         return resultado

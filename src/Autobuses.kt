@@ -8,7 +8,26 @@ abstract class Autobuses {
         this.conductor = conductor
         this.precio_base = precio_base
     }
+    fun set_numeroID(numero_id: Int) {
+        this.numero_id = numero_id
+    }
+    fun get_Rutget_NumeroID(): Int  {
+        return numero_id
+    }
 
+    fun set_Conductor(conductor: Conductor) {
+        this.conductor = conductor
+    }
+    fun get_Conductor(): Conductor  {
+        return conductor
+    }
+
+    fun set_PrecioBase(precio_base: Double) {
+        this.precio_base = precio_base
+    }
+    fun get_PrecioBase(): Double  {
+        return precio_base
+    }
     abstract fun calcularPrecio(): Double
 
     override fun toString(): String {
