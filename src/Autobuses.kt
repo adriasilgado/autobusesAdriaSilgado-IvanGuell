@@ -8,4 +8,10 @@ abstract class Autobuses {
         this.conductor = conductor
         this.precio_base = precio_base
     }
+
+
+    abstract fun calcularPrecio() : Double
+
+
+
 }
